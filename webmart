@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión Marte: ¿Un nuevo hogar?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos específicos para Dislexia y Accesibilidad */
+        :root {
+            --marte-rojo: #bc4b21;
+            --marte-tierra: #8b4513;
+            --tierra-azul: #2b6cb0;
+            --tierra-verde: #2f855a;
+            --bg-crema: #fdfbf7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif; /* Sans-serif legible */
+            line-height: 1.6; /* Interlineado aumentado */
+            font-size: 18px; /* Tamaño de cuerpo grande */
+            background-color: var(--bg-crema);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            color: var(--marte-rojo);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 80ch;
+            margin-bottom: 1.5rem;
+            /* Evitar párrafos de más de 3-4 líneas visualmente */
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border-left: 8px solid var(--marte-rojo);
+        }
+
+        .nav-link:hover {
+            border-bottom: 3px solid var(--marte-rojo);
+        }
+
+        /* Glosario Acordeón */
+        .glossary-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .quiz-container {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Estilos de botones táctiles */
+        button {
+            min-height: 48px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="font-bold text-2xl text-red-700">Misión Marte 🚀</div>
+            <div class="space-x-4 flex flex-wrap">
+                <a href="#inicio" class="nav-link px-2">Inicio</a>
+                <a href="#bio-geo" class="nav-link px-2">Bio-Geo</a>
+                <a href="#fis-qui" class="nav-link px-2">Física-Química</a>
+                <a href="#mates" class="nav-link px-2">Mates</a>
+                <a href="#recursos" class="nav-link px-2">Recursos</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="bg-slate-900 text-white py-20 px-6 text-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1200&q=80'); background-size: cover;">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">¿Puede ser Marte nuestro nuevo hogar?</h1>
+        <p class="text-xl max-w-2xl mx-auto">Un viaje científico para entender los retos de colonizar el Planeta Rojo.</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <!-- SECCIÓN 1: INTRODUCCIÓN Y ODS -->
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <h2>Presentación del Proyecto</h2>
+                    <p>En este proyecto investigaremos si Marte tiene las <span class="highlight">condiciones necesarias</span> para la vida humana.</p>
+                    <p>Analizaremos su suelo, su atmósfera y el agua disponible para crear una colonia sostenible.</p>
+                    <div class="flex gap-4 mt-4">
+                        <div class="bg-blue-100 p-3 rounded text-center text-sm font-bold">ODS 11<br>Ciudades Sostenibles</div>
+                        <div class="bg-green-100 p-3 rounded text-center text-sm font-bold">ODS 12<br>Consumo Responsable</div>
+                        <div class="bg-red-100 p-3 rounded text-center text-sm font-bold">ODS 13<br>Acción Climática</div>
+                    </div>
+                </div>
+                <div class="flex-1 img-container">
+                    <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=500&q=80" alt="Vista del planeta Marte desde el espacio">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: BIOLOGÍA Y GEOLOGÍA -->
+        <section id="bio-geo" class="mb-16">
+            <h2 class="border-b-4 border-green-600 inline-block pb-1 mb-6">Misión 1: Biología y Geología</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3>La Geosfera</h3>
+                    <p>Marte es un <span class="highlight">planeta rocoso</span>. Al igual que la Tierra, tiene corteza, manto y núcleo.</p>
+                    <p>Su superficie está llena de óxido de hierro, lo que le da su color rojo característico.</p>
+                </div>
+                <div class="card">
+                    <h3>Hidrosfera y Atmósfera</h3>
+                    <p>El agua en Marte está mayormente <span class="highlight">congelada</span> en los polos.</p>
+                    <p>La atmósfera es muy delgada y está compuesta principalmente por CO2.</p>
+                </div>
+            </div>
+
+            <!-- Interactivo Bio-Geo: Quiz Rápido -->
+            <div class="quiz-container mt-6">
+                <h3 class="text-lg font-bold mb-4">Verifica tu conocimiento 🧠</h3>
+                <div id="quiz-biogeo">
+                    <p class="mb-2">¿Cuál es el gas más abundante en la atmósfera de Marte?</p>
+                    <button onclick="checkQuiz(this, false)" class="bg-white border-2 border-slate-300 rounded m-1 hover:bg-red-100">Oxígeno</button>
+                    <button onclick="checkQuiz(this, true)" class="bg-white border-2 border-slate-300 rounded m-1 hover:bg-green-100">Dióxido de Carbono</button>
+                    <button onclick="checkQuiz(this, false)" class="bg-white border-2 border-slate-300 rounded m-1 hover:bg-red-100">Nitrógeno</button>
+                    <p id="quiz-res" class="mt-2 font-bold"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: FÍSICA Y QUÍMICA -->
+        <section id="fis-qui" class="mb-16">
+            <h2 class="border-b-4 border-blue-600 inline-block pb-1 mb-6">Misión 2: Física y Química</h2>
+            
+            <div class="card">
+                <h3>Los Gases Atmosféricos</h3>
+                <p>En la Tierra respiramos una mezcla de <span class="highlight">Nitrógeno (78%)</span> y <span class="highlight">Oxígeno (21%)</span>.</p>
+                <p>En Marte, debemos fabricar nuestro propio oxígeno mediante reacciones químicas.</p>
+            </div>
+
+            <!-- Interactivo: Simulador de Agua -->
+            <div class="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                <h3>Simulador: Creación de Agua (H₂O)</h3>
+                <p>Combina átomos para formar la molécula vital.</p>
+                <div class="flex items-center justify-center gap-4 py-6">
+                    <div id="atom-h" class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center font-bold">H</div>
+                    <span class="text-2xl">+</span>
+                    <div id="atom-h2" class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center font-bold">H</div>
+                    <span class="text-2xl">+</span>
+                    <div id="atom-o" class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center font-bold">O</div>
+                    <button onclick="formarAgua()" class="bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700">¡Reaccionar!</button>
+                </div>
+                <p id="agua-msg" class="text-center font-bold text-blue-800"></p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: MATEMÁTICAS -->
+        <section id="mates" class="mb-16">
+            <h2 class="border-b-4 border-yellow-600 inline-block pb-1 mb-6">Misión 3: Matemáticas Marcianas</h2>
+            
+            <div class="card">
+                <h3>Estadística Ambiental</h3>
+                <p>Comparamos las <span class="highlight">temperaturas medias</span>: Tierra (15ºC) vs Marte (-63ºC).</p>
+                <p>La gravedad en Marte es solo el <span class="highlight">38%</span> de la terrestre.</p>
+            </div>
+
+            <!-- Interactivo: Calculadora de Peso -->
+            <div class="bg-orange-50 p-6 rounded-xl border-2 border-orange-200">
+                <h3 class="mb-4">Calculadora de Peso Espacial</h3>
+                <label for="peso-tierra" class="block mb-2">Introduce tu peso en la Tierra (kg):</label>
+                <input type="number" id="peso-tierra" class="p-2 border rounded w-full max-w-xs mb-4" placeholder="Ej: 60">
+                <button onclick="calcularPeso()" class="bg-orange-600 text-white rounded-lg font-bold w-full md:w-auto">Calcular en Marte</button>
+                <p id="peso-res" class="mt-4 text-2xl text-orange-800 font-bold"></p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: RECURSOS -->
+        <section id="recursos" class="mb-16">
+            <h2 class="border-b-4 border-purple-600 inline-block pb-1 mb-6">Recursos y Biblioteca</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-4 bg-white border rounded shadow hover:shadow-lg transition">
+                    <p class="font-bold">🎬 Vídeos</p>
+                    <p class="text-sm">Explora el aterrizaje de los Rovers en Marte.</p>
+                </div>
+                <div class="p-4 bg-white border rounded shadow hover:shadow-lg transition">
+                    <p class="font-bold">📖 Lecturas</p>
+                    <p class="text-sm">Guía del Universo y origen de la Tierra.</p>
+                </div>
+                <div class="p-4 bg-white border rounded shadow hover:shadow-lg transition">
+                    <p class="font-bold">🧪 Simuladores</p>
+                    <p class="text-sm">Laboratorios virtuales de física y química.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOSARIO ACCESIBLE -->
+        <section class="bg-white p-8 rounded-2xl shadow-inner border border-gray-200">
+            <h2 class="text-2xl font-bold mb-4">Glosario de Términos 📚</h2>
+            <div class="space-y-4">
+                <details class="glossary-item p-2">
+                    <summary class="font-bold cursor-pointer">Geosfera</summary>
+                    <p class="pl-4 pt-2">La parte sólida de la Tierra o un planeta, formada por rocas y minerales.</p>
+                </details>
+                <details class="glossary-item p-2">
+                    <summary class="font-bold cursor-pointer">Atmósfera</summary>
+                    <p class="pl-4 pt-2">Capa de gases que rodea a un planeta. Nos protege del sol y nos permite respirar.</p>
+                </details>
+                <details class="glossary-item p-2">
+                    <summary class="font-bold cursor-pointer">Gravedad</summary>
+                    <p class="pl-4 pt-2">Fuerza invisible que atrae los objetos hacia el centro de un planeta.</p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white py-12 px-6 mt-20">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Fuentes y Créditos</h3>
+                <ul class="text-sm space-y-2 opacity-80">
+                    <li>- Orientacions curriculars de matemàtiques (edigital.cat)</li>
+                    <li>- Guía del Universo: Origen, Planetas y la Tierra</li>
+                    <li>- NASA Mars Exploration Program</li>
+                    <li>- Objetivos de Desarrollo Sostenible (Naciones Unidas)</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Accesibilidad</h3>
+                <p class="text-sm opacity-80">Esta web ha sido diseñada siguiendo pautas para alumnos con dislexia: fuentes sans-serif, alto contraste y bloques de texto cortos.</p>
+            </div>
+        </div>
+        <div class="text-center mt-10 pt-6 border-t border-slate-700 opacity-60 text-xs">
+            &copy; 2024 Proyecto Misión Marte - Educación Secundaria.
+        </div>
+    </footer>
+
+    <script>
+        // Lógica del Quiz Bio-Geo
+        function checkQuiz(btn, isCorrect) {
+            const res = document.getElementById('quiz-res');
+            if(isCorrect) {
+                res.innerHTML = "¡Correcto! 🎉 Marte tiene un 95% de CO2.";
+                res.style.color = "green";
+                btn.classList.add('bg-green-200');
+            } else {
+                res.innerHTML = "Inténtalo de nuevo. Pista: Es el gas que expulsamos al respirar.";
+                res.style.color = "red";
+                btn.classList.add('bg-red-200');
+            }
+        }
+
+        // Lógica del Simulador de Agua
+        function formarAgua() {
+            const msg = document.getElementById('agua-msg');
+            msg.innerHTML = "💧 ¡Felicidades! Has formado una molécula de agua (H₂O). El hidrógeno y el oxígeno se han unido mediante un enlace químico.";
+            msg.classList.add('animate-bounce');
+        }
+
+        // Lógica de la Calculadora de Peso
+        function calcularPeso() {
+            const pesoTierra = document.getElementById('peso-tierra').value;
+            const res = document.getElementById('peso-res');
+            
+            if(pesoTierra > 0) {
+                // Gravedad en Marte es aprox 3.71 m/s², en la Tierra 9.81 m/s²
+                // Proporción es 0.38
+                const pesoMarte = (pesoTierra * 0.38).toFixed(1);
+                res.innerHTML = `¡En Marte pesarías solo ${pesoMarte} kg! 🏃💨 Podrías saltar muy alto.`;
+            } else {
+                res.innerHTML = "Por favor, introduce un número válido.";
+                res.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
